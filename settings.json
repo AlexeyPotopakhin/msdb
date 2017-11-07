@@ -1,0 +1,22 @@
+{
+  "debug": false,
+  "broker": {
+    "host": "localhost",
+    "port": "1883",
+    "client_id": "7963bfcaa44247d4bc116e3189911ac5"
+  },
+  "options": {
+    "clean_session": true,
+    "keep_alive_interval": 30,
+    "username": "USERNAME",
+    "password": "PASSWORD"
+  },
+  "subscriptions": {
+    "request": "arduino_request",
+    "response": "arduino_response"
+  },
+  "serial_device": {
+    "port_name": "/dev/ttyAMA0",
+    "baud_rate": 9600
+  }
+}

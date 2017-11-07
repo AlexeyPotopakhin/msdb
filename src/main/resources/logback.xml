@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Appenders -->
+    <!-- File appender -->
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>log.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] : %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Console appender -->
+    <appender name="sout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date %level [%thread] [%file:%line] : %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Loggers -->
+    <!-- Root logger -->
+    <root>
+        <appender-ref ref="file" />
+    </root>
+    <!-- Main class logger -->
+    <logger name="com.msdb.MqttSerialDeviceBridge" additivity="false">
+        <appender-ref ref="sout" />
+        <appender-ref ref="file" />
+    </logger>
+    <logger name="com.msdb.MqttCallBack" additivity="false">
+        <appender-ref ref="sout" />
+        <appender-ref ref="file" />
+    </logger>
+</configuration>
