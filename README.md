@@ -2,6 +2,8 @@
 
 MQTT bridge with Raspberry Pi and any other serial (UART) device (e.g Arduino)
 
+Based on [Eclipse Paho](https://github.com/eclipse/paho.mqtt.java) and [pi4j](https://github.com/Pi4J/pi4j)
+
 ## Settings
 Put all necessary settings to `settings.json`
 
